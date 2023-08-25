@@ -2,8 +2,13 @@ import Image from "next/image";
 import { getJob } from "@/sanity/sanity.query";
 import type { JobType } from "@/types";
 
+function sortByDateDesc(a: JobType, b: JobType) {
+  return new Date(b.startDate) - new Date(a.startDate);
+}
+
 export default async function Job() {
   const job: JobType[] = await getJob();
+  job.sort(sortByDateDesc)
   return (
     <section className="mt-32">
       <div className="mb-16">
