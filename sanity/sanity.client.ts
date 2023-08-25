@@ -3,10 +3,10 @@ import { createClient, type ClientConfig } from "@sanity/client";
 const config: ClientConfig = {
   projectId: "wv7us4c0",
   dataset: "production",
-  apiVersion: "2023-08-19",
-  useCdn: false,
+  apiVersion: "2023-08-27",
+  useCdn: true,
 };
 
 const client = createClient(config);
 
-export default client;4
+export default client;

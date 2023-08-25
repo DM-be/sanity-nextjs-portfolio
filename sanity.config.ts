@@ -6,7 +6,7 @@ export default defineConfig({
   name: 'default',
   title: 'Sanity Next.js Portfolio',
   basePath: "/studio",
-  projectId: 'ga8lllhf', 
+  projectId: 'wv7us4c0', 
   dataset: 'production',
 
   plugins: [deskTool()],
