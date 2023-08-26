@@ -16,7 +16,7 @@ export default async function About() {
               <div className="order-2 lg:order-none">
                 <h1 className="lg:text-5xl text-4xl lg:leading-tight basis-1/2 font-bold mb-8">
                   I&apos;m {data.fullName}. I live in {data.location}, where I
-                  design the future.
+                  build the future.
                 </h1>
 
                 <div className="flex flex-col gap-y-3 text-zinc-400 leading-relaxed">
@@ -60,7 +60,7 @@ export default async function About() {
             <section className="mt-24 max-w-2xl">
               <h2 className="font-semibold text-4xl mb-4">Expertise</h2>
               <p className="text-zinc-400 max-w-lg">
-                I&apos;ve spent few years working on my skills. In no particular
+                I&apos;ve spent years working on my skills. In no particular
                 order, here are a few of them.
               </p>
 
