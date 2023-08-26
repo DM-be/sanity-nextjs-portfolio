@@ -39,6 +39,7 @@ export default async function Home() {
               </ul>
             </div>
           ))}
+        <HeroSvg />
       </section>
       <Job /> 
     </main>
