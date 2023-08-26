@@ -41,7 +41,6 @@ export default async function Home() {
           ))}
         <HeroSvg />
       </section>
-      {/* @ts-expect-error Server Component */}
       <Job /> 
     </main>
   );
