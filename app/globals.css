@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes wave-animation {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    20%, 60% {
+      transform: rotate(10deg);
+    }
+    40%, 80% {
+      transform: rotate(-10deg);
+    }
+  }
+  
+  .wave {
+    display: inline-block;
+    transform-origin: center bottom;
+    animation: wave-animation 2s ;
+  }

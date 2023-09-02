@@ -8,6 +8,7 @@ export default defineConfig({
   basePath: "/studio",
   projectId: 'wv7us4c0', 
   dataset: 'production',
+  
 
   plugins: [deskTool()],
 

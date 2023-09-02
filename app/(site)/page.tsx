@@ -17,7 +17,7 @@ export default async function Home() {
           profile.map((data) => (
             <div key={data._id} className="lg:max-w-2xl max-w-2xl">
               <h1 className="text-3xl font-bold tracking-tight sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full">
-                {data.headline}
+                Hi, I'm Dennis <span className="wave">👋</span>
               </h1>
               <p className="text-base text-zinc-400 leading-relaxed">
                 {data.shortBio}
