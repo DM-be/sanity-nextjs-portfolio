@@ -42,3 +42,25 @@ export type ProjectType = {
   };
   description: PortableTextBlock[];
 };
+
+export type CategoryType = {
+  _id: string;
+  name: string;
+  title: string;
+  description: string;
+};
+
+
+export type PostType = {
+  _id: string;
+  name: string;
+  slug: string;
+  title: string;
+  categories: CategoryType [];
+  publishedAt: Date;
+  mainImage: {
+    alt: string | null;
+    image: string;
+  };
+  content: PortableTextBlock[],
+};

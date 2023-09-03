@@ -59,3 +59,32 @@ export async function getSingleProject(slug: string) {
     { slug }
   );
 }
+
+
+export async function getPosts() {
+  return client.fetch(
+    groq`*[_type == "post"]{
+      _id, 
+      name,
+      "slug": slug.current,
+      title,
+      mainImage { alt, "image": asset->url },
+      "logo": logo.asset->url,
+    }`
+  );
+}
+
+export async function getSinglePost(slug: string) {
+  return client.fetch(
+    groq`*[_type == "post" && slug.current == $slug][0]{
+      _id,
+      name,
+      projectUrl,
+      mainImage { alt, "image": asset->url },
+      tagline,
+      content,
+      publishedAt
+    }`,
+    { slug }
+  );
+}
