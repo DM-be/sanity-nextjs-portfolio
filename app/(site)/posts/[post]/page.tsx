@@ -4,6 +4,7 @@ import { getSinglePost } from "@/sanity/sanity.query";
 import type { PostType } from "@/types";
 import { PortableText } from "@portabletext/react";
 import fallBackImage from "@/public/project.png";
+import Code from "../../components/Code";
 
 type Props = {
   params: {
@@ -50,7 +51,7 @@ export default async function Project({ params }: Props) {
         />
 
         <div className="flex flex-col gap-y-6 mt-8 leading-7 text-zinc-400">
-          <PortableText value={post.content} />
+            <Code value={post.content} />
         </div>
       </div>
     </main>
