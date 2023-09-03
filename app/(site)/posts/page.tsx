@@ -20,7 +20,7 @@ export default async function Project() {
       <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
         {posts.map((post) => (
           <Link
-            href={`/projects/${post.slug}`}
+            href={`/posts/${post.slug}`}
             key={post._id}
             className="flex items-center gap-x-4 bg-[#1d1d20] border border-transparent hover:border-zinc-700 p-4 rounded-lg ease-in-out"
           >
