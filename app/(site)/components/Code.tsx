@@ -10,11 +10,11 @@ interface CodeProps {
   };
 }
 
-const Code = (props) => {
+const Code = (props: any) => {
 
   const customBlockComponents = {
     types: {
-      code: ({ value }) => {
+      code: ({ value } : any) => {
         console.log(value)
         return (
           <p>{value.code}</p>
