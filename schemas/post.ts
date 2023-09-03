@@ -37,7 +37,7 @@ export default defineType({
     }),
     defineField({
       name: 'content',
-      title: 'content',
+      title: 'Content',
       type: 'array',
       of: [
         {
@@ -50,17 +50,17 @@ export default defineType({
           type: 'code',
           options: {
             languageAlternatives: [
-              {title: 'Javascript', value: 'javascript'},
-              {title: 'Angular', value: 'angular'},
-              {title: 'Angular-like', value: 'angular-like', mode: 'angular'}, // uses angular highlighter
-              {title: 'Typescript', value: 'typescript'},
-              {title: 'HTML', value: 'html'},
-              {title: 'CSS', value: 'css'},	
-              {title: 'c#', value: 'csharp'},
+              { title: 'Javascript', value: 'javascript' },
+              { title: 'Angular', value: 'angular' },
+              { title: 'Angular-like', value: 'angular-like', mode: 'angular' }, // uses angular highlighter
+              { title: 'Typescript', value: 'typescript' },
+              { title: 'HTML', value: 'html' },
+              { title: 'CSS', value: 'css' },
+              { title: 'c#', value: 'csharp' }
             ]
           }
-       }  
+        }
       ]
-    }),
-  ],
+    })
+  ]
 })
