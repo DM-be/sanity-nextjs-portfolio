@@ -69,7 +69,6 @@ export async function getPosts() {
       "slug": slug.current,
       title,
       mainImage { alt, "image": asset->url },
-      "logo": logo.asset->url,
     }`
   );
 }
