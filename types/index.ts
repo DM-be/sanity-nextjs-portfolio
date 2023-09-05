@@ -53,9 +53,9 @@ export type CategoryType = {
 
 export type PostType = {
   _id: string;
-  name: string;
   slug: string;
   title: string;
+  shortSummary: string;
   categories: CategoryType [];
   publishedAt: Date;
   mainImage: {

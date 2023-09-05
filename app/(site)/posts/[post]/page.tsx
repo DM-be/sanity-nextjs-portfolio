@@ -4,8 +4,6 @@ import type { PostType } from "@/types";
 import { PortableText } from "@portabletext/react";
 import fallBackImage from "@/public/project.png";
 import { CustomComponents } from "../../components/Code";
-import { use } from "react";
-import Head from "next/head";
 import { Metadata } from "next";
 type Props = {
   params: {
@@ -20,12 +18,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post: PostType = await getSinglePost(slug)
 
   return {
-    title: `${post.name} | Project`,
-    description: post.name,
+    title: `${post.title} | Post`,
+    description: post.shortSummary,
     openGraph: {
       images: post.mainImage?.image || "add-a-fallback-project-image-here",
-      title: post.name,
-      description: post.name,
+      title: post.title,
+      description: post.shortSummary,
     },
   };
 }
@@ -39,7 +37,7 @@ export default async function Project({ params }: Props) {
       <div className="max-w-3xl mx-auto">
         <div className="flex items-start justify-between mb-4">
           <h1 className="font-bold lg:text-5xl text-3xl lg:leading-tight mb-4">
-            {post.name}
+            {post.title}
           </h1>
         </div>
 
@@ -48,7 +46,7 @@ export default async function Project({ params }: Props) {
           width={600}
           height={200}
           src={post.mainImage?.image || fallBackImage}
-          alt={post.mainImage?.alt || post.name}
+          alt={post.mainImage?.alt || post.title}
         />
 
         <div className="flex flex-col gap-y-6 mt-8 leading-7 text-zinc-400">

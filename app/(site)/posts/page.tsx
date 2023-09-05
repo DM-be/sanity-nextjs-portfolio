@@ -28,7 +28,7 @@ export default async function Project() {
               src={post.mainImage.image}
               width={60}
               height={60}
-              alt={post.name}
+              alt={post.title}
               className="bg-zinc-800 rounded-md p-2"
             />
             <div>
