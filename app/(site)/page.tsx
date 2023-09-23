@@ -3,6 +3,10 @@ import HeroSvg from "@/icons/HeroSvg";
 import { getProfile } from "@/sanity/sanity.query";
 import type { ProfileType } from "@/types";
 import Job from "./components/Job";
+import { Popover, PopoverContent, PopoverTrigger } from "./openai/ui/popover";
+import Chat from "./openai/chat";
+import { Button } from "./openai/ui/button";
+import { MessageCircle } from "lucide-react";
 
 
 
@@ -42,6 +46,22 @@ export default async function Home() {
         <HeroSvg />
       </section>
       <Job /> 
+      <div className="flex bg-zinc-900 min-h-screen items-center justify-center">
+      <Popover>
+        <PopoverContent align="start" className="w-[440px] mr-4">
+          <Chat />
+        </PopoverContent>
+        <PopoverTrigger asChild className="fixed bottom-4 right-4">
+          <Button
+            variant="outline"
+            className="rounded-full w-16 h-16 aspect-square bg-black hover:bg-gray-700"
+          >
+            <MessageCircle size={40} className="text-white" />
+          </Button>
+        </PopoverTrigger>
+      </Popover>
+    </div>
     </main>
+    
   );
 }
